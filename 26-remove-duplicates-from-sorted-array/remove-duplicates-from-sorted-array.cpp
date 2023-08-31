@@ -1,28 +1,26 @@
 class Solution {
 public:
     int removeDuplicates(vector<int>& nums) {
+        map<int, int> freqMap; // Changed variable name to freqMap
+    for (int i = 0; i < nums.size(); i++)
+        freqMap[nums[i]]++;
+
+    int j = 0;
+    for (const auto& pair : freqMap) {
+        nums[j++] = pair.first; // Using pair.first to get the unique elements
+    }
+    return freqMap.size(); // Returning the number of unique elements    
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        // map<int,int>map;
+        // for(int i=0;i<nums.size();i++)
+        //     map[nums[i]]++;
+        // int j=0;
+        // int n=map.size();
+        // for(int i=0;i<n;i++){
+        //     nums[j++]=i.first;
+        // }
+        // return nums.size();
 
 
 
@@ -46,18 +44,18 @@ public:
 
 
 
-
-        set<int>set;
-        for(int i=0;i<nums.size();i++){
-            set.insert(nums[i]);
-        }
-        int i=0;
-        for(auto x:set){
-            nums[i]=x;
-            i++;
-        }
+        // //correct using set
+        // set<int>set;
+        // for(int i=0;i<nums.size();i++){
+        //     set.insert(nums[i]);
+        // }
+        // int i=0;
+        // for(auto x:set){
+        //     nums[i]=x;     //not nums[i]=set[x];
+        //     i++;
+        // }
 
         
-        return set.size();
+        // return set.size();
     }
 };
