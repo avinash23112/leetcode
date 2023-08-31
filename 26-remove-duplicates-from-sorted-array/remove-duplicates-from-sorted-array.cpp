@@ -12,8 +12,7 @@ public:
         }
         v.push_back(nums[n - 1]);
         nums=v;
-        int j=v.size();
-        return j;
+        return v.size();
 
 
 
