@@ -13,7 +13,7 @@ public:
         else 
             return 0;
 
-
+        //best solution copied
         // int s=1;
         // if(num==1) return false;
         // for(int i=2;i<=sqrt(num);i++){
