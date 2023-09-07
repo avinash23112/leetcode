@@ -2,7 +2,7 @@ class Solution {
 public:
     bool strongPasswordCheckerII(string password) {
         int small=0,cap=0,num=0,spe=0;
-        if(password.length() <8 )
+        if(password.length() < 8 )
             return 0;
         for(int i=0;i<password.length();i++){
             char ch =password[i];
@@ -14,7 +14,7 @@ public:
                 num++;
             if(ch=='!'||ch=='@'||ch=='#'||ch=='$'||ch=='%'||ch=='^'||ch=='&'||ch=='*'||ch=='('||ch==')'||ch=='-'||ch=='+')  
                 spe++; 
-            if(password[i]==password[i+1] && i!=password.length()-1)
+            if(password[i]==password[i+1] && i!=password.length())
                 return 0;
         
         }
