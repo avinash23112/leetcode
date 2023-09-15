@@ -3,8 +3,10 @@ public:
     int mostFrequentEven(vector<int>& nums) {
 
         map<int,int>map;
-        for(int i=0;i<nums.size();i++)
-            map[nums[i]]++;
+        for(int i=0;i<nums.size();i++){
+            if(nums[i]%2==0)
+                map[nums[i]]++;
+        }
         
         int maxfre=INT_MIN;
         int maxnum;
