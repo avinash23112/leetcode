@@ -10,7 +10,7 @@ public:
         int maxfreq=INT_MIN;
         int maxnum;
         int i=0;
-        while(i<k){
+        for(i=0;i<k;i++){
             for(auto x:map){
                 if(x.second>maxfreq){
                     maxfreq=x.second;
@@ -21,7 +21,7 @@ public:
             res.push_back(maxnum);
             map.erase(maxnum);
             maxfreq=INT_MIN;
-            i++;
+            
            
         }
         return res;
