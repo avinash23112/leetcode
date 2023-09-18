@@ -13,16 +13,16 @@ public:
 
 
 
-        //return haystack.find(needle);
+        return haystack.find(needle);
 
 
         // size_t found = haystack.find(needle);
         // return found;
 
-        auto it = haystack.find(needle);
-        if(it!=string::npos){
-            return it;
-        }
-        return -1;
+        // auto it = haystack.find(needle);
+        // if(it!=string::npos){
+        //     return it;
+        // }
+        // return -1;
     }
 };
