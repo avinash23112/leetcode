@@ -1,13 +1,45 @@
 class Solution {
 public:
     vector<int> sortArrayByParity(vector<int>& nums) {
+        int n=nums.size();
+        vector<int>v(n);
 
-        //copied
-        // Use std::partition to rearrange elements
-        std::partition(nums.begin(), nums.end(), [](int num) {
-            return num % 2 == 0; // Place even numbers before odd numbers
-        });
+        int j=0;
+        int k=n-1;
 
-        return nums;
+        for(int i=0;i<n;i++){
+            if(nums[i]%2==0){
+                v[j++]=nums[i];
+                
+            }
+            else{
+                v[k]=nums[i];
+                k--;
+            }
+        }
+        return v;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // for(int i =0;i<nums.size();i++){
+        //     if(nums[i]%2==0  && i!=0 ){
+        //         swap(nums[i],nums[i+1]);
+                
+
+        //     }
+        // }
+        // return nums;
+
     }
 };
